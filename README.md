@@ -26,6 +26,8 @@
 
 ## 3  Threat Reference Guide (enterprise examples & controls)
 
+Section 3 outlines a curated set of **external threats** that already exist in agentic systems, large language model deployments, and multi-tenant orchestration environments. These threats are not hypothetical—they have been observed in the wild or demonstrated through public red-team exercises and academic literature. Our threat profiles are designed to help implementers of NLIP and adjacent protocols recognize, prioritize, and mitigate risks that originate outside the control plane, including adversarial prompts, cross-agent impersonation, model extraction, and session hijack techniques. This reference is intended to guide security architects and product teams in aligning defensive controls to realistic attacker capabilities.
+
 ### Threat Risk Heat-Map
 
 **Legend:** High = ≥15 🔴 (red); Medium = 9-14 🟠 (orange); Low = ≤8 🟢 (green)
@@ -482,12 +484,8 @@ SOC KPIs (MTTD/MTTR),SRE,2025-09-10,Pending
 
 ## 7  Future Enhancements
 
-- Hardware-rooted remote attestation for GPU clusters.
-- Fine-grained cost-aware throttling tied to billing APIs.
-- Differential privacy knobs for analytics endpoints.
-- PQC migration paths (NIST HQC draft 2026). AI ethics integration per NIST AI RMF.
-- NLIP-Sec-Bench: shared jailbreak corpus & red-team prompt exchange.
-- OPA/Gatekeeper policy bundle for runtime MVCS enforcement.
+- Dedicated “Deployment” section in the guidelines, with clear, actionable recommendations for securing NLIP in a typical enterprise rollout.
+- Map NLIP’s security layers onto real-world system components, with help for implementers to understand their existing infrastructures (e.g., service mesh, API gateway, container clusters) each security control belongs.
 
 ---
 
@@ -753,4 +751,3 @@ to mitigate control-plane concentration risk and enforce org-wide guardrails acr
 ---
 
 *End of document.*
-
