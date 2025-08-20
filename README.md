@@ -309,9 +309,9 @@ In multi-agent systems, one agent may send a reply that contains malicious instr
 - Response Filtering (I/O Firewall): Deploy a filtering layer between agents that parses the content, removes or blocks unexpected instructions and logs suspicious deviations for security monitoring.
 - Context-Aware Policy Enforcement: Policies should define which instructions are permitted in the current task context. Commands outside the context should trigger either automatic blocking, or human-in-the-loop approval.
 - Agent Lifecycle Isolation: Use ephemeral agents for individual tasks to limit persistence of any compromised behavior. Isolate task-specific agents so that one agent’s malicious response cannot directly access or corrupt other tasks’ state.
-- Privilege Minimization: Agents should operate with least privilege; no unnecessary access to sensitive data, no execution rights for commands unrelated to the current task, if Schema-Enforced Communication Is Not Possible (e.g, responses are in natural language (NL))
+- Privilege Minimization: Agents should operate with least privilege; no unnecessary access to sensitive data, no execution rights for commands unrelated to the current task.
 - Message classification: run every incoming NL message through a classifier that decides: (i) Allowed — proceed as normal; (ii) Suspicious — block or send for human review. 
-- Task-boundary enforcement: before an agent acts on an incoming NL message: (i) retrieve the current task context (“book hotel room”);  (ii) ask a task-alignment checker: Does the incoming reply message’s intent match the current allowed actions and what was the content of the request?;  (iii) block or escalate if intent is out of scope
+- Task-boundary enforcement: before an agent acts on an incoming NL message: (i) retrieve the current task context (“book hotel room”);  (ii) ask a task-alignment checker: Does the incoming reply message’s intent match the current allowed actions and what was the content of the request?;  (iii) block or escalate if intent is out of scope.
 - Adversarial testing: Maintain a red-team corpus of known malicious NL instructions (data exfiltration requests, payments) and run them regularly through the system to ensure the filters still work. 
 
 ### 3.15 Human Factors and Insider Threats
