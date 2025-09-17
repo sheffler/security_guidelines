@@ -4,6 +4,13 @@
 **Status:** Revised working draft toward ECMA TC-56 ballot  
 **Audience:** Security engineers, SREs, architects, CISOs, and compliance teams deploying NLIP agents at enterprise-scale.
 
+## Table of Contents
+
+1. [Introduction](#1-introduction)
+2. [Core Security Principles](#2-core-security-principles)
+3. [Threat Reference Guide](#3-threat-reference-guide)
+4. [Message Format](#4-message-format)
+
 ---
 
 ## 1  Introduction
